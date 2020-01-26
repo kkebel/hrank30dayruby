@@ -1,0 +1,14 @@
+#!/bin/ruby
+require 'json'
+require 'stringio'
+
+def solve(meal_cost, tip_percent, tax_percent)
+	total_cost = meal_cost + (meal_cost*(tip_percent/100.0)) + (meal_cost*(tax_percent/100.0))
+	puts "#{total_cost.round}"
+end
+
+meal_cost = gets.to_f
+tip_percent = gets.to_i
+tax_percent = gets.to_i
+
+solve meal_cost, tip_percent, tax_percent
